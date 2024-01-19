@@ -336,3 +336,18 @@ public record Error(string Description);
 /// <param name="Id">Entity Id</param>
 /// <param name="Message">Message</param>
 public record EntityWarning(string Name, object Id, string Message);
+
+/// <summary>
+/// Result Exception
+/// </summary>
+/// <param name="result"></param>
+public class ResultException(Result result) : Exception
+{
+    public Result Result => result;
+
+    public ResultException(params Validation[] validations) 
+        : this(Domain.Result.WithValidations(validations)) { }
+    
+    public ResultException(Exception exception)
+        : this(Domain.Result.WithError(exception)) { }
+}

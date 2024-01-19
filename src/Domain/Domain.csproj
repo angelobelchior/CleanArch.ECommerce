@@ -8,5 +8,9 @@
     <AssemblyName>ECommerce.Domain</AssemblyName>
     <RootNamespace>ECommerce.Domain</RootNamespace>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <InternalsVisibleTo Include="ECommerce.UnitTests" />
+  </ItemGroup>
 
 </Project>

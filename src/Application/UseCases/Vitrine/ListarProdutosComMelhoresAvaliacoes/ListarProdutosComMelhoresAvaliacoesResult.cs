@@ -1,0 +1,3 @@
+namespace ECommerce.Application.UseCases.Vitrine.ListarProdutosComMelhoresAvaliacoes;
+
+public record ListarProdutosComMelhoresAvaliacoesResult(IReadOnlyCollection<Produto> Produtos);

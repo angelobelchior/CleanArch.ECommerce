@@ -1,7 +1,6 @@
 using ECommerce.Application;
 using ECommerce.Infrastructure;
 using ECommerce.WebAPI.Endpoints;
-using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplication();
@@ -16,7 +15,7 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 app.UseVitrineEndpoints();
-//app.UseCarrinhoEndpoints();
+app.UseCarrinhoEndpoints();
 //app.UseCheckoutEndpoints();
 
 
